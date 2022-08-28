@@ -59,7 +59,7 @@ async def team(ctx, sheet_name, tab_site, api_token):
                 await ctx.send(f"Institution - {ins_code}")
                 break
 
-            elif adj_row[3] == 'x':
+            elif adj_row[2] == 'x':
                 await ctx.send(f"No Institution!")
                 break
         
