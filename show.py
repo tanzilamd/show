@@ -51,8 +51,19 @@ async def team(ctx, sheet_name, tab_site, api_token):
         
         
         x += 1
-        await ctx.send(f"Input for **{name}** is starting...")
         
+        await ctx.send(f"Getting the institution data for {name} ...")
+        for i in institutions:
+            if i['code'] == ins_code:
+                institution = i['url']
+                await ctx.send(f"Institution - {ins_code}")
+                break
+
+            elif adj_row[3] == 'x':
+                await ctx.send(f"No Institution!")
+                break
+        
+        await ctx.send(f"Input for **{name}** is starting...")
         
         # Gender
         # 1
